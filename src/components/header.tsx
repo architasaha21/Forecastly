@@ -3,7 +3,7 @@ import { useTheme } from '../context/theme-provider';
 import { Sun, Moon } from 'lucide-react';
 import { CitySearch } from "./citysearch";
 
-const Header = () => {
+export const Header = () => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
@@ -38,4 +38,3 @@ const Header = () => {
   )
 }
 
-export default Header
