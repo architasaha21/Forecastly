@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+# 🌦️ Klimate – React Weather Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Klimate is a sleek and responsive weather dashboard built using modern React tooling. It displays current weather, forecasts, and more — all styled beautifully with `shadcn/ui`. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tool | Usage |
+|------|-------|
+| ⚛️ [React](https://reactjs.org/) | Frontend framework |
+| 🧠 [TanStack Query](https://tanstack.com/query/latest) | Data fetching & caching |
+| 💅 [shadcn/ui](https://ui.shadcn.com/) + [Tailwind CSS](https://tailwindcss.com/) | UI components & styling |
+| 🗺️ [OpenWeather API](https://openweathermap.org/api) | Weather & forecast data |
+| 🌍 [Reverse Geocoding API](e.g. Nominatim or similar) | Convert lat/lng to location name |
+| 📦 [Vite](https://vitejs.dev/) | Fast bundler & dev server |
+| 🧪 TypeScript | For type safety and cleaner code |
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+-  Real-time weather data by geolocation
+-  Location-based reverse geocoding
+-  Hourly & 7-day forecast display
+-  Light/dark mode (via `next-themes`)
+-  Clean toast notifications (Sonner)
+-  "Enable Location" error handling
+-  Responsive layout with mobile-first UI
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🙏 Acknowledgements
+
+- Roadside Coder YouTube Tutorial    
+- shadcn/ui
+- TanStack Query
+- OpenWeather API
